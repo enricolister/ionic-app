@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Lista } from '../../models'; //this works because of the index file in the models folder
+import { Lista } from '../models'; //this works because of the index file in the models folder
 
 @Injectable()
 export class DeseosProvider {

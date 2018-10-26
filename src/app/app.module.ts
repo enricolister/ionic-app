@@ -11,7 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 // Services (called providers in Ionic)
-import { DeseosProvider } from './providers/deseos.provider';
+import { DeseosProvider } from '../providers/deseos.provider';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { DeseosProvider } from './providers/deseos.provider';
   providers: [
     StatusBar,
     SplashScreen,
-    DeseosProvider
+    DeseosProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

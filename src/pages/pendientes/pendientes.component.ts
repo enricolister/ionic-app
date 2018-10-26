@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DeseosProvider } from '../../app/providers/deseos.provider';
+import { DeseosProvider } from '../../providers/deseos.provider';
+import { Lista } from '../../models';
 
 @Component({
   selector: 'page-pendientes',
@@ -9,5 +10,9 @@ export class PendientesPage {
 
   constructor( public deseosProvider: DeseosProvider) {
 
+  }
+
+  listaSeleccionada(lista: Lista) {
+    console.log(lista);
   }
 }
