@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesPage } from '../pages/pendientes/pendientes.component';
 import { TerminadosPage } from '../pages/terminados/terminados.component';
+import { AgregarPage } from '../pages/agregar/agregar.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,7 @@ import { DeseosProvider } from '../providers/deseos.provider';
     TabsPage,
     PendientesPage,
     TerminadosPage,
+    AgregarPage,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { DeseosProvider } from '../providers/deseos.provider';
     TabsPage,
     PendientesPage,
     TerminadosPage,
+    AgregarPage,
   ],
   providers: [
     StatusBar,
