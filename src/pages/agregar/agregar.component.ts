@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DeseosProvider } from '../../providers/deseos.provider';
-import { Lista } from '../../models';
+import { Lista, ListaItem } from '../../models';
 import { NavParams } from 'ionic-angular';
 
 @Component({
@@ -10,6 +10,7 @@ import { NavParams } from 'ionic-angular';
 export class AgregarPage {
 
   lista: Lista;
+  nombreItem: string = '';
 
   constructor( public deseosProvider: DeseosProvider,
                private navParams: NavParams ) {
@@ -18,7 +19,16 @@ export class AgregarPage {
     this.lista = new Lista (titulo);
   }
 
-  listaSeleccionada(lista: Lista) {
-    console.log(lista);
+  agregarItem() {
+    if (this.nombreItem.length === 0) {
+      return;
+    }
+    const nuevoItem = new ListaItem(this.nombreItem);
+    this.lista.items.push(nuevoItem);
+    this.nombreItem = '';
+  }
+
+  actualizarTarea(item: ListaItem) {
+    item.completado = !item.completado;
   }
 }
