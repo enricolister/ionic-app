@@ -17,6 +17,7 @@ export class AgregarPage {
 
     const titulo = this.navParams.get('titulo');
     this.lista = new Lista (titulo);
+    this.deseosProvider.agregarLista(this.lista);
   }
 
   agregarItem() {
@@ -30,5 +31,9 @@ export class AgregarPage {
 
   actualizarTarea(item: ListaItem) {
     item.completado = !item.completado;
+  }
+
+  borrar(i: number) {
+    this.lista.items.splice(i, 1);
   }
 }
