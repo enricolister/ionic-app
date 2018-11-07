@@ -24,6 +24,10 @@ export class PendientesPage {
     });
   }
 
+  borrarLista(lista: Lista) {
+    this.deseosProvider.borrarLista(lista);
+  }
+
   agregarLista() {
     //this.navCtrl.push(AgregarPage);
     const alerta = this.alertCtrl.create({
