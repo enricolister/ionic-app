@@ -13,6 +13,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // Services (called providers in Ionic)
 import { DeseosProvider } from '../providers/deseos.provider';
+//Pipes
+import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completado';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { DeseosProvider } from '../providers/deseos.provider';
     PendientesPage,
     TerminadosPage,
     AgregarPage,
+    FiltroCompletadoPipe
   ],
   imports: [
     BrowserModule,

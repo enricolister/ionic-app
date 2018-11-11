@@ -9,11 +9,11 @@
   <ion-list>
 
     <ion-list-header>
-      Tareas por hacer
+      Elementos
     </ion-list-header>
 
     <ion-item>
-      <ion-label floating>Nuevo Item</ion-label>
+      <ion-label floating>Nuevo Elemento</ion-label>
       <ion-input [(ngModel)]="nombreItem"
                  type="text"
                  (keyup.enter)="agregarItem()"
@@ -23,9 +23,7 @@
 
   <ion-list *ngIf="lista.items.length > 0">
 
-    <ion-list-header>
-     Tareas por hacer
-    </ion-list-header>
+
 
   <ion-item-sliding *ngFor="let item of lista.items; let i = index"
                     class="animated fadeInDown">

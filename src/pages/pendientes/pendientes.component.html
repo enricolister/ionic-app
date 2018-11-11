@@ -10,7 +10,7 @@
 
   <ion-list>
 
-    <ion-item-sliding *ngFor="let lista of deseosProvider.listas">
+    <ion-item-sliding *ngFor="let lista of deseosProvider.listas | filtroCompletado: false">
 
       <button ion-item (click)="listaSeleccionada(lista)">
           {{ lista.titulo }}
