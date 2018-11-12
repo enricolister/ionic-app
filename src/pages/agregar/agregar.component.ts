@@ -32,6 +32,9 @@ export class AgregarPage {
     const nuevoItem = new ListaItem(this.nombreItem);
     this.lista.items.push(nuevoItem);
 
+    if (this.lista.terminada === true) {
+      this.lista.terminada = false;
+    }
     this.deseosProvider.guardarStorage();
     this.nombreItem = '';
   }
@@ -42,7 +45,7 @@ export class AgregarPage {
     const pendientes = this.lista.items.filter(itemData => {
       return !itemData.completado;
     }).length;
-    alert(pendientes);
+
     if (pendientes === 0) {
       this.lista.terminada = true;
       this.lista.terminadaEn = new Date();
