@@ -59,6 +59,20 @@ export class AgregarPage {
 
   borrar(i: number) {
     this.lista.items.splice(i, 1);
+
+
+    const pendientes = this.lista.items.filter(itemData => {
+      return !itemData.completado;
+    }).length;
+
+    if (pendientes === 0) {
+      this.lista.terminada = true;
+      this.lista.terminadaEn = new Date();
+    } else {
+      this.lista.terminada = false;
+      this.lista.terminadaEn = null;
+    }
+
     this.deseosProvider.guardarStorage();
   }
 }
